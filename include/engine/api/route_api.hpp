@@ -835,11 +835,9 @@ class RouteAPI : public BaseAPI
                             static_cast<std::uint64_t>(facade.GetOSMNodeIDOfNode(node_id)));
                         auto node_coordinate = facade.GetCoordinateOfNode(node_id);
                         latitudes.values.push_back(
-                            static_cast<double>(util::toFloating(coordinate_1.lat));
-                        );
+                            static_cast<double>(util::toFloating(coordinate_1.lat)));
                         longitudes.values.push_back(
-                            static_cast<double>(util::toFloating(coordinate_1.lon));
-                        );
+                            static_cast<double>(util::toFloating(coordinate_1.lon)));
                     }
                     annotation.values["nodes"] = std::move(nodes);
                     annotation.values["latitudes"] = std::move(latitudes);
