@@ -829,6 +829,8 @@ class RouteAPI : public BaseAPI
                     util::json::Array latitudes;
                     util::json::Array longitudes;
                     nodes.values.reserve(leg_geometry.node_ids.size());
+                    latitudes.values.reserve(leg_geometry.node_ids.size());
+                    longitudes.values.reserve(leg_geometry.node_ids.size());
                     for (const auto node_id : leg_geometry.node_ids)
                     {
                         nodes.values.push_back(
